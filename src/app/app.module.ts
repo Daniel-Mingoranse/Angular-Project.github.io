@@ -10,18 +10,22 @@ import { timer } from 'rxjs';
 import { TimerComponent } from './timer/timer.component';
 import { RouterModule } from '@angular/router';
 import { TimerService } from './timer.service';
+import { BitcoinService } from './bitcoin.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BitcoinComponent } from './bitcoin/bitcoin.component';
 
 
 @NgModule({
-  imports: [CommonModule, BrowserModule, RouterModule.forRoot([
+  imports: [CommonModule, BrowserModule, HttpClientModule,RouterModule.forRoot([
     {path: '', component: ContentComponent},
     {path: 'timer', component: TimerComponent},
     {path: 'tabuada', component: TabuadaComponent},
+    {path: 'bitcoin', component: BitcoinComponent},
   ])],
   
-  declarations: [MenuComponent, RootComponent, ContentComponent, FooterComponent,TabuadaComponent,TimerComponent],
+  declarations: [MenuComponent, RootComponent, ContentComponent, FooterComponent,TabuadaComponent,TimerComponent, BitcoinComponent],
   
   bootstrap: [RootComponent],
-  providers: [TimerService]
+  providers: [TimerService, BitcoinService]
 })
 export class AppModule {}
