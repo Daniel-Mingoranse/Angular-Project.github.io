@@ -1,0 +1,13 @@
+
+
+.color{
+  background-color: rgb(255, 255, 255);
+  color:black;
+  border: 1px solid black;
+}
+
+.black{
+  background-color: black;
+  color:white;
+  border: 1px solid black;
+}

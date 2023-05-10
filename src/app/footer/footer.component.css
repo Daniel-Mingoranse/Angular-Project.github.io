@@ -1,0 +1,35 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: rgb(196, 195, 197);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+a{
+  margin:10px;
+  text-decoration: none;
+  color: black;
+}
+
+svg{
+  background-color: white;
+}
