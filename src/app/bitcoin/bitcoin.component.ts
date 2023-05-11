@@ -28,7 +28,7 @@ export class BitcoinComponent implements OnInit {
         <td>$${priceUSD.rate_float} | </td>
         <td>$${priceBRL.rate_float}</td>
       `;
-    }, 50000)
+    }, 1000)
   }
 
   getCurrentPriceUSD(){
