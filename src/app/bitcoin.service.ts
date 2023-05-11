@@ -25,7 +25,6 @@ export class BitcoinService {
   currentPrice: Response;
   lastUpdate: Date;
   lasprice: number
-
   UpdateList: Array<PrioceUpdate> = [];
 
   constructor(private http: HttpClient) {}
@@ -35,16 +34,13 @@ export class BitcoinService {
       .get<Response>('https://api.coindesk.com/v1/bpi/currentprice/BRL.json')
       .subscribe((data) => {
         this.lastUpdate = new Date();
-        if (this.currentPrice.bpi.USD.rate_float != this.lasprice) {
+
           this.currentPrice = data;
           this.UpdateList.push({
             updated: this.lastUpdate,
             USD: this.currentPrice.bpi.USD.rate_float,
             BRL: this.currentPrice.bpi.BRL.rate_float,
-          });
-          this.lasprice = this.currentPrice.bpi.USD.rate_float
-          
-        }
+          });          
        
       });
   }
